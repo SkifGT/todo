@@ -60,13 +60,14 @@ return (
           <List.Item>
             <Typography.Text mark onClick={()=>handleClickTask(item)} className="cu-p">
             {item.is_complete 
-              ? <CheckCircleTwoTone twoToneColor="#eb2f96"/> 
-              : <CloseSquareTwoTone/>
+              ? <CheckCircleTwoTone twoToneColor="#eb2f96" style={{fontSize: '18px'}}/> 
+              : <CloseSquareTwoTone style={{fontSize: '18px'}}/>
             }
             </Typography.Text> 
             <DeleteTwoTone 
             onClick={()=>handleDeleteTask(item)} 
             className="cu-p"
+            style={{fontSize: '18px'}}
             /> {item.text} 
           </List.Item>
         )}
