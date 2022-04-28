@@ -2,13 +2,15 @@ import React from 'react';
 import { Form, Input, message, Button, Space } from 'antd';
 
 const Demo = (
-     {addTask}
+      {addTask}
       ) => {
   const [form] = Form.useForm();
 
   const onFinish = async (value) => {
     message.success('Задача добавлена!');
+    form.resetFields();
     await addTask(value);
+    
   };
 
   const onFinishFailed = () => {
@@ -47,7 +49,7 @@ const Demo = (
           <Button type="primary" htmlType="submit">
             Добавить
           </Button>
-         </Space>
+          </Space>
       </Form.Item>
     </Form>
   );
