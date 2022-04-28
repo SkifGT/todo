@@ -58,9 +58,9 @@ return (
         dataSource={todoList}
         renderItem={item => (
           <List.Item>
-            <Typography.Text mark onClick={()=>handleClickTask(item)} className="cu-p">
+            <Typography.Text  onClick={()=>handleClickTask(item)} className="cu-p">
             {item.is_complete 
-              ? <CheckCircleTwoTone twoToneColor="#eb2f96" style={{fontSize: '18px'}}/> 
+              ? <CheckCircleTwoTone twoToneColor="#eb2f96" style={{fontSize: '18px', color: '#ffffff'}}/> 
               : <CloseSquareTwoTone style={{fontSize: '18px'}}/>
             }
             </Typography.Text> 
