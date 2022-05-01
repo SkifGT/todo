@@ -46,7 +46,7 @@ const Demo = ({addTask}) => {
           <Button type="primary" htmlType="submit">
             Добавить
           </Button>
-        S</Space>
+        </Space>
       </Form.Item>
     </Form>
   );
