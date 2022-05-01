@@ -45,7 +45,7 @@ const handleAddTask = async (text) => {
 
 
 return (
-  <>
+  <div style={{marginLeft: '10px', marginRight: '10px'}}>
     <Divider orientation="left"><h2>Список задач</h2></Divider>
     <List
       header={<div><h3>Количество задач {todoList.length} </h3></div>}
@@ -69,7 +69,7 @@ return (
       )}
     />
     <Demo addTask={handleAddTask} />
-  </>
+  </div>
   );
 }
 
