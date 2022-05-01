@@ -1,16 +1,13 @@
 import React from 'react';
 import { Form, Input, message, Button, Space } from 'antd';
 
-const Demo = (
-      {addTask}
-      ) => {
+const Demo = ({addTask}) => {
   const [form] = Form.useForm();
 
   const onFinish = async (value) => {
     message.success('Задача добавлена!');
     form.resetFields();
     await addTask(value);
-    
   };
 
   const onFinishFailed = () => {
@@ -25,7 +22,7 @@ const Demo = (
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
-    <Form.Item
+      <Form.Item
         name="text"
         label=""
         rules={[
@@ -41,15 +38,15 @@ const Demo = (
             min: 6,
         },
         ]}
-    >
-        <Input placeholder="Введите задачу" allowClear="true" onPressEnter=""/>
-    </Form.Item>
-    <Form.Item>
+      >
+      <Input placeholder="Введите задачу" allowClear="true" onPressEnter=""/>
+      </Form.Item>
+      <Form.Item>
         <Space>
           <Button type="primary" htmlType="submit">
             Добавить
           </Button>
-          </Space>
+        S</Space>
       </Form.Item>
     </Form>
   );
